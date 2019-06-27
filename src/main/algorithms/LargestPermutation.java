@@ -18,7 +18,6 @@ public class LargestPermutation {
                 return true;
             }
         }
-
         return false;
 
     }
@@ -28,7 +27,16 @@ public class LargestPermutation {
 
         if(visitedCounter == inputArr.length){
             for(int i=0;i<visitedCounter; i++){
+                System.out.print(visited[i]);
+            }
+            System.out.println();
+        }
 
+        for(int i=0; i<inputArr.length; i++){
+            if(!contains(visited, visitedCounter, i)){
+                visited[visitedCounter++] = i;
+
+//                findPermutation();
             }
         }
 
